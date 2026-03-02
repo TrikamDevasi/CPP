@@ -1,21 +1,46 @@
 #include<iostream>
-#include<string>
+
 using namespace std;
 
-class countObjects{
+class CountObject{
+    
+    // Data members...
+    
     public:
-        static int count;
-        countObjects(){
-            count++;
-        }
-        ~countObjects(){
-            count--;
-        }
+      
+     static int count;
+      
+      CountObject(){
+          ++count;
+      }
+      
+      ~CountObject(){
+          --count;
+      }
+      
+      void displayCount(){
+          cout << "The total object created is:->" << count << endl;
+      }
+    
 };
-int countObjects::count=0;
+
+int CountObject::count = 0;
+
+void createObj(){
+        CountObject c4, c5, c6, c7;
+        
+        c7.displayCount();
+}
 
 int main(){
-    countObjects obj1, obj2, obj3, obj4, obj5;
-    cout<<"Total number of objects: "<<countObjects::count<<endl;
+    
+    CountObject c1, c2, c3;
+    
+    c3.displayCount();
+    
+    createObj();
+    
+    c2.displayCount();
+    
     return 0;
 }
