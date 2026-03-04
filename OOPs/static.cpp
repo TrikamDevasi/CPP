@@ -40,7 +40,7 @@ int main(){
     
     createObj();
     
-    c2.displayCount();
+    c2.displayCount();    
     
     return 0;
 }
